@@ -15,9 +15,11 @@ $RECYCLE.BIN/
 *.msp
 *.sass-cache
 *.map
-*.html
+*.css.map
+*.css
 
 node_modules
+dist
 
 # Windows shortcuts
 *.lnk

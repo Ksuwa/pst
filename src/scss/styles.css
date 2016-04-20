@@ -1,6 +1,38 @@
-/* line 1, C:/Users/User/GitHub/pst/src/scss/styles.scss */
+/* line 3, C:/Users/user/GIT/pst/src/scss/styles.scss */
 body {
-  background: url(img/bg.jpg) no-repeat;
-  background-size: cover; }
+  font: 20px "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  height: 100%;
+  line-height: 1.6; }
+
+/* line 9, C:/Users/user/GIT/pst/src/scss/styles.scss */
+h1 {
+  font-size: 52px; }
+
+/* line 13, C:/Users/user/GIT/pst/src/scss/styles.scss */
+.page-wrapper {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background-color: #DCDCDC;
+  background-size: cover;
+  height: 100%; }
+
+/* line 20, C:/Users/user/GIT/pst/src/scss/styles.scss */
+.header-top {
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 100%; }
+
+/* line 28, C:/Users/user/GIT/pst/src/scss/styles.scss */
+.header-logo {
+  padding: 40px 0 10px; }
+  /* line 31, C:/Users/user/GIT/pst/src/scss/styles.scss */
+  .header-logo-img {
+    float: left;
+    margin-right: 15px;
+    width: 60px; }
+  /* line 37, C:/Users/user/GIT/pst/src/scss/styles.scss */
+  .header-logo-name {
+    font: 700 60px "Josefin Slab", "Helvetica Neue", Helvetica, sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
