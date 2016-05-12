@@ -3,29 +3,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>PST</title>
-	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="scss/styles.css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 </head>
-<body>
-<div class="page-wrapper">
-	<header class="header-top">
-		<container>
-			<div class="header-logo">
-<!--				<img src="img" alt="" class="img-responsive header-logo-img">      Раскомменти когда появится норм логотип-->
-				<p class="header-logo-name">ПСТ</p>
+<body class="page-wrapper">
+	<div class="container">
+	<header class="header hidden-xs">
+			<div class="header-top">
+				<div class="header-logo">
+					<img src="img/logo-pst.png" alt="Логотип ПСТ" class="img-responsive header-logo-img">
+				</div>
+				<div class="header-logo-name">ПСТ</div>
 			</div>
-			<div class="header-text"><p>Товары для строительства и ремонта</p></div>
-		</container>
+			<div class="header-text"><p>Товары для строительства и ремонта</p>
+			</div>
+				<div class="contacts">
+					<ul class="list-unstyled">
+						<li class="contacts-list"><a href="tel:+79531408440" class="contacts-link"><i class="fa fa-phone"></i>  +7 (953) 140 84 40</a></li>
+						<li class="contacts-list"><a href="malito:inna_pss@mail.ru" class="contacts-link"><i class="fa fa-envelope"></i> inna_pss@mail.ru</a></li>
+					</ul>
+				</div>
 	</header>
+	</div>
 	<nav class="navbar navbar-default nav-custom">
 		<div class="container">
-			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
-				<ul class="list-unstyled nav-custom-list nav navbar-nav">
-					<li><a href="#" class="nav-custom-link">Главная</a></li>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-header-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="visible-xs navbar-brand brand-custom" href="index.html">ПСТ</a>
+			</div>
+			<div class="navbar-collapse collapse" id="nav-header-collapse">
+				<ul class="nav-custom-list nav navbar-nav">
+					<li><a href="/" class="nav-custom-link">Главная</a></li>
 					<li><a href="#" class="nav-custom-link">Каталог</a></li>
 					<li><a href="#" class="nav-custom-link">Услуги</a></li>
 					<li><a href="#" class="nav-custom-link">Реквизиты</a></li>
@@ -34,6 +51,34 @@
 			</div>
 		</div>
 	</nav>
-</div>
-
+	<section class="content">
+		<div class="container">
+			<div class="slider">
+				<img src="img/paint.jpg" alt="Краска для строительства" class="slider-img img-responsive">
+			</div>
+			<div class="slider">
+				<h1>О компании "ПСТ"</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+			</div>
+		</div>
+	</section>
+	<footer class="footer-wrapper">
+		<div class="container">
+			<div class="footer-section">
+				<img src="img/logo-pst.png" alt="Логотип" class="img-responsive footer-logo">
+				<div class="footer-contacts">
+					<span class="contacts-info">
+						<a href="tel:+79531408440" class="contacts-link-f"><i class="fa fa-phone"></i>  +7 (953) 140 84 40
+						</a></span>
+					<span class="contacts-info">
+					<a href="malito:inna_pss@mail.ru" class="contacts-link-f"><i class="fa fa-envelope"></i> inna_pss@mail.ru
+					</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+</html>

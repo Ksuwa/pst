@@ -1,16 +1,21 @@
 @import '_variable.scss';
 
-body {
-	font: $font-size-base $font-base;
-	height: 100%;
-	line-height: 1.6;
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-caption;
 }
 
 h1 {
 	font-size: $font-size-base + 36;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
-a {
+h2 {
+	font-size: $font-size-base + 26;
+}
+
+a, a:hover {
 	text-decoration: none;
 }
 
@@ -18,55 +23,163 @@ a {
 	background: url(../img/bg.jpg) no-repeat center center fixed;
 	background-color: #DCDCDC;
 	background-size: cover;
+	font: $font-size-base $font-base;
 	height: 100%;
+	line-height: 1.6;
 }
 
 .header {
+	color: $c-white;
+	letter-spacing: 3px;
+	max-width: 680px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 	
 	&-top {
-		color: #fff;
-		letter-spacing: 3px;
-		text-align: center;
-		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-		width: 100%;
+		clear: both;
+		margin: 30px auto 15px;
+		max-width: 270px;
+		overflow: hidden;
 	}
 	
 	&-text {
+		border-bottom: 1px solid #fff;
 		font-size: $font-size-base + 10;
-		padding-bottom: 20px;
 	}
 
 	&-logo {
-		padding: 40px 0 10px;
+		float: left;
+		margin-right: 20px;
+		width: 92px;
 
-		&-img {
-			float: left;
-			margin-right: 15px;
-			width: 60px;
-		}
-
-		&-name {
-			font: 700 $font-size-base + 40 $font-caption;
+	&-name {
+		float: left;
+		font: 700 $font-size-base + 50 $font-caption;
 		}
 	}
+	
+	.contacts {
+		padding: 10px 60px 0;
+		
+		ul {
+			overflow: hidden;
+		}
+		
+		&-list {
+			float: left;
+			font-size: $font-size-base - 2;
+			padding: 0 20px;
+		}
+		
+		&-link {
+			@extend .header;
+			color: $c-link;
+		}
+		
+		&-link:hover {
+			color: $c-link-hover;
+		}
+	}
+
 }
 
 .nav-custom {
-	background-color: $c-navbar;
+	background-color: $bg-navbar;
 
 	&-list {
-		padding: 0px 100px;
 		
 		li {
 			padding: 6px 15px;
 		}
+	}
+	
+	&-link {
+		color: $c-link-nav;
+		letter-spacing: $leter-spacing;
+		text-transform: uppercase;
+		}
+
+	.brand-custom {
+		border-bottom: 1px solid $c-link-nav;
+		float: none;
+		font-size: $font-size-base + 4;
+		font-weight: 600;
+	}
+}
+
+.slider {
+	background-color: $bg-navbar;
+	margin-bottom: 40px;
+	padding: 30px;
+	
+	&-img {
+		margin: 0 auto;
+	}
+}
+
+.footer {
+	&-wrapper{
+	background-color: $bg-navbar;
+	padding: 20px 0 10px;
+	clear: both;
+	overflow: hidden;
+	}
+	
+	&-section {
+		padding: 0 30px;
+	}
+
+	&-logo {
+		float: left;
+		width: 75px;
+	}
+
+	&-contacts {
+		float: right;
 		
-		a {
-			color: $c-link-nav;
-			font-size: $font-size-base;
-			letter-spacing: $leter-spacing;
-			text-transform: uppercase;
+		.contacts {
+			&-info {
+				font-size: $font-size-base - 2;
+				padding: 5px 0;
+				display: block;
+			}
+			
+			&-link-f {
+				color: $c-link-nav;
+			}
 		}
 	}
 }
 
+@media screen and (min-width: 1200px){
+		.nav-custom {
+			&-list {
+				padding: 0px 100px;
+			}
+	}
+}
+@media screen and (max-width: 992px) and (min-width: 768px){
+	.nav-custom {
+		&-list {
+			li {
+				padding: 0;
+			}
+		}
+		
+		&-link {
+			font-size: $font-size-base - 3;
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.nav-custom {
+		&-list li {
+			font-size: $font-size-base - 6;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
