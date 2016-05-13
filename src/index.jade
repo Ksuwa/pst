@@ -1,0 +1,86 @@
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		block title
+			title PST
+		block headLinks
+			link(rel='icon', type='image/x-icon', href='img/favicon.ico')
+			link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+			link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+			link(href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic', rel='stylesheet', type='text/css')
+		block headStyles
+			link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+			link(rel='stylesheet', href='css/styles.min.css')
+body.page-wrapper
+	.container
+		header.header.hidden-xs
+			.header-top
+				.header-logo
+					img.img-responsive.header-logo-img(src='img/logo-pst.png', alt='Логотип ПСТ')
+				.header-logo-name ПСТ
+			.header-text
+				p
+				| Товары для строительства и ремонта
+			.contacts
+				ul.list-unstyled
+					li.contacts-list
+						a.contacts-link(href='tel:+79531408440')
+							i.fa.fa-phone
+							|   +7 (953) 140 84 40
+					li.contacts-list
+						a.contacts-link(href='malito:inna_pss@mail.ru')
+							i.fa.fa-envelope
+							|  inna_pss@mail.ru
+	nav.navbar.navbar-default.nav-custom
+		.container
+			.navbar-header
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#nav-header-collapse')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.visible-xs.navbar-brand.brand-custom(href='index.html') ПСТ
+			#nav-header-collapse.navbar-collapse.collapse
+				ul.nav-custom-list.nav.navbar-nav
+					li
+						a.nav-custom-link(href='/') Главная
+					li
+						a.nav-custom-link(href='#') Каталог
+					li
+						a.nav-custom-link(href='#') Услуги
+					li
+						a.nav-custom-link(href='#') Реквизиты
+					li
+						a.nav-custom-link(href='#') Контакты
+	section.content
+		.container
+			.slider
+				img.slider-img.img-responsive(src='img/paint.jpg', alt='Краска для строительства')
+			.slider
+				h1.h1-index О компании "ПСТ"
+				p
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	footer.footer-wrapper
+		.container
+			.row
+				.footer-section
+					.col-md-3.col-xs-12
+						.footer-item-logo
+							img.img-responsive.footer-logo(src='img/logo-pst.png', alt='Логотип')
+							.footer-name ПСТ
+					.col-md-6.col-xs-12
+						.footer-copyright.text-center Copyright © 2016 "ПСТ" (Санкт-Петербург)
+					.col-md-3.col-xs-12
+						.footer-contacts
+							span.contacts-info
+								a.contacts-link-f(href='tel:+79531408440')
+									i.fa.fa-phone
+									|   +7 (953) 140 84 40
+							span.contacts-info
+								a.contacts-link-f(href='malito:inna_pss@mail.ru')
+									i.fa.fa-envelope
+									|  inna_pss@mail.ru
+	block script
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')

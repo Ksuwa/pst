@@ -1,6 +1,5 @@
 @import '_variable.scss';
 
-
 h1, h2, h3, h4, h5 {
 	font-family: $font-caption;
 }
@@ -117,41 +116,77 @@ a, a:hover {
 	&-img {
 		margin: 0 auto;
 	}
+	
+	.h1-index {
+		border-top: $c-border-h1;
+		border-bottom: $c-border-h1;
+		font-size: $font-size-base + 20;
+		letter-spacing: $leter-spacing;
+		text-transform: uppercase;
+		padding: 15px 0 7px;
+	}
 }
 
 .footer {
 	&-wrapper{
 	background-color: $bg-navbar;
-	padding: 20px 0 10px;
+	padding: 10px 0 0;
 	clear: both;
 	overflow: hidden;
 	}
 	
 	&-section {
-		padding: 0 30px;
+		padding: 0 20px;
 	}
 
 	&-logo {
-		float: left;
+		float:left;
+		margin-right: 20px;
 		width: 75px;
 	}
 
+	&-name {
+		color: $c-link-nav;
+		float: left;
+		font-size: $font-size-base + 22;
+		font-weight: 600;
+		margin-top: 4px;
+	}
+	
+	&-item-logo {
+		height: 67px;
+		margin: 0 auto;
+		max-width: 200px;
+	}
+	
+	&-copyright {
+		padding-top: 28px;
+	}
+	
 	&-contacts {
 		float: right;
+		padding-top: 5px;
 		
 		.contacts {
 			&-info {
-				font-size: $font-size-base - 2;
-				padding: 5px 0;
 				display: block;
+				font-size: $font-size-base - 2;
+				padding: 0;
 			}
 			
 			&-link-f {
 				color: $c-link-nav;
+
+				&:hover {
+					color: black;
+				}
 			}
 		}
 	}
 }
+
+
+@import '_variable.scss';
 
 @media screen and (min-width: 1200px){
 		.nav-custom {
@@ -160,6 +195,7 @@ a, a:hover {
 			}
 	}
 }
+
 @media screen and (max-width: 992px) and (min-width: 768px){
 	.nav-custom {
 		&-list {
@@ -172,14 +208,53 @@ a, a:hover {
 			font-size: $font-size-base - 3;
 		}
 	}
+	
+	.footer {
+		&-contacts {
+			float: none;
+			text-align: center;
+		}
+		
+		&-copyright {
+			padding: 0;
+		}
+	}
 }
 
 @media screen and (max-width: 768px){
 	.nav-custom {
 		&-list li {
 			font-size: $font-size-base - 6;
-			padding: 0;
 			margin: 0;
+			padding: 0;
+		}
+		
+		&-contacts {
+			float: none;
+			text-align: center;
+		}
+	}
+
+	.footer {
+		
+		&-contacts {
+			float: none;
+			text-align: center;
+			
+			a.contacts-link-f {
+				font-size: $font-size-base - 4;
+			}
+		}
+		
+		&-section {
+			padding: 0;
+		}
+		
+		&-copyright {
+			font-size: $font-size-base - 4;
+			padding: 10px 0 0;
 		}
 	}
 }
+
+

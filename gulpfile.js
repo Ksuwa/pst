@@ -7,9 +7,11 @@ var gulp	 = require('gulp'),
 	concat	 = require('gulp-concat'),
 	imagemin = require('gulp-imagemin'),
 	del 	 = require('del'),
-	cache 	 = require('gulp-cache');
+	cache	= require('gulp-cache'),
+	connect	= require('gulp-connect'),
 	livereload = require('gulp-livereload');
 
+//TODO:Удалить лишние плагины!!
 
 gulp.task('build', ['clean'], function() {
 	gulp.start('jade', 'sass', 'image', 'css');
@@ -19,39 +21,30 @@ gulp.task('build', ['clean'], function() {
 //		GULP JADE
 //************************************
 gulp.task('jade', function() {
-	return gulp.src('src/*.jade')
+	return gulp.src(['src/*.jade', '!src/_*.jade'])
 		.pipe( jade({ pretty : true }))
-		.pipe(gulp.dest('dist')); 
+		.pipe(gulp.dest('dist'))
+		.pipe( connect.reload() ); 
 });
 
 //************************************
 //		GULP SASS
 //************************************
 gulp.task('sass', function() {
-	return gulp.src('src/scss/**/*.scss') 
+	return gulp.src('src/scss/**/*.scss')
 		.pipe( sass({outputStyle: 'compressed'}) )
 		.pipe( rename({ suffix: '.min' }) )
 		.pipe( gulp.dest('dist/css') )
-});
-
-//************************************
-//		GULP CSS
-//************************************
-gulp.task('css', function() {
-	gulp.src('src/scss/**/*.css')
-		.pipe( cssmin() )
-		.pipe( rename({ suffix: '.min' }) )
-		.pipe( gulp.dest('dist/css') );
+		.pipe( connect.reload() );
 });
 
 //************************************
 //		GULP IMAGE
 //************************************
 gulp.task('image', function () {
-	gulp.src('scr/img/**/*.{jpg,jpeg,png,gif}')
-	.pipe( image() )
-//	.pipe( imagemin() )
-	.pipe( gulp.dest('dist/img') );
+	gulp.src('src/img/**/*')
+		.pipe( imagemin() )
+		.pipe( gulp.dest('dist/img') )
 });
 
 //************************************
@@ -63,19 +56,29 @@ gulp.task('clean', function() {
 });
 
 //***********************************
-//		GULP WATCH
+//		GULP CONNECT
 //************************************
 
-gulp.task('watch', function(){
-	gulp.watch('src/**/*.jade', ['jade']); 
-	gulp.watch('src/scss/**/*.scss', ['sass']); 
-	gulp.watch('src/images/**/*', ['image'])
-	livereload.listen();
-	gulp.watch(['dist/**']).on('change', livereload.changed);
-	livereload.listen();
-	gulp.watch(['dist/**']).on('change', livereload.changed);
-})
+gulp.task('connect', function() {
+	connect.server({
+		root	   : 'dist',
+		livereload : true
+	});
+});
 
+// //***********************************
+//		GULP WATCH
+//**************************************
+gulp.task('watch', function() {
+	gulp.watch( 'src/**/*.jade', ['jade'] );
+	gulp.watch( 'src/scss/**/*.scss', ['sass'] );
+//	gulp.watch( '', ['js'] );
+});
+
+// //***********************************
+//		GULP 
+//**************************************
+gulp.task( 'default', ['watch', 'connect'] );
 
 ////************************************
 ////		GULP JS
