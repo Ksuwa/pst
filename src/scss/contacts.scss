@@ -1,0 +1,51 @@
+@import '_variable.scss';
+
+.contacts-page {
+	
+	&-btn {
+	float: right;
+	}
+	
+	&-input {
+		max-width: 500px;
+	}
+	
+	&-list {
+		margin-bottom: 15px;
+		max-width: 710px;
+		text-shadow: $t-shadow;
+		overflow: hidden;
+		
+		li {
+			float: left;
+			padding: 5px 40px 0 0;
+		}
+		
+		li:last-child {
+			padding-right: 0;
+		}
+		
+		a {
+			color: darken($c-link, 15%);
+		}
+		
+		a:hover {
+			color: lighten($c-link, 5%);
+		}
+	}
+	
+	&-form {
+		font-size: $font-size-base - 2;
+		margin-bottom: 10px;
+//		max-width: 700px;
+	}
+}
+
+.map {
+	height: 400px;
+	margin-top: 20px;
+}
+
+.vision-none {
+	visibility: hidden;
+}

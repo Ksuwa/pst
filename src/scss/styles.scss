@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5 {
 h1 {
 	font-size: $font-size-base + 36;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 h2 {
@@ -18,16 +18,27 @@ a, a:hover {
 	text-decoration: none;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
 .page-wrapper {
 	background: url(../img/bg.jpg) no-repeat center center fixed;
 	background-color: #DCDCDC;
 	background-size: cover;
 	font: $font-size-base $font-base;
-	height: 100%;
+	min-height: 100%;
 	line-height: 1.6;
 }
 
-.header {
+.header { 
 	color: $c-white;
 	letter-spacing: 3px;
 	max-width: 680px;
@@ -38,7 +49,7 @@ a, a:hover {
 	
 	&-top {
 		clear: both;
-		margin: 30px auto 15px;
+		margin: 30px auto 0;
 		max-width: 270px;
 		overflow: hidden;
 	}
@@ -60,7 +71,8 @@ a, a:hover {
 	}
 	
 	.contacts {
-		padding: 10px 60px 0;
+		padding: 10px 50px 0;
+		margin-bottom: 15px;
 		
 		ul {
 			overflow: hidden;
@@ -68,7 +80,7 @@ a, a:hover {
 		
 		&-list {
 			float: left;
-			font-size: $font-size-base - 2;
+			font-size: $font-size-base -1;
 			padding: 0 20px;
 		}
 		
@@ -106,12 +118,27 @@ a, a:hover {
 		font-size: $font-size-base + 4;
 		font-weight: 600;
 	}
+	
+	.brand-custom:before {
+		content: "";
+		background: url(../img/logo-pst-head.png) no-repeat;
+		display: block;
+		float: left;
+		height: 38px;
+		margin: -9px 10px 0 0;
+		width: 43px;
+	}
+}
+
+.content {
+	flex: 1 0 auto;
+	margin: 30px 0 0;
 }
 
 .slider {
 	background-color: $bg-navbar;
-	margin-bottom: 40px;
-	padding: 30px;
+	margin-bottom: 50px;
+	padding: 40px 50px;
 	
 	&-img {
 		margin: 0 auto;
@@ -120,7 +147,7 @@ a, a:hover {
 	.h1-index {
 		border-top: $c-border-h1;
 		border-bottom: $c-border-h1;
-		font-size: $font-size-base + 20;
+		font-size: $font-size-base + 18;
 		letter-spacing: $leter-spacing;
 		text-transform: uppercase;
 		padding: 15px 0 7px;
@@ -136,30 +163,29 @@ a, a:hover {
 	}
 	
 	&-section {
-		padding: 0 20px;
+		color: $c-link-nav;
+		padding: 0 5px 5px;
 	}
 
 	&-logo {
-		float:left;
+		float: left;
 		margin-right: 20px;
-		width: 75px;
 	}
 
 	&-name {
 		color: $c-link-nav;
 		float: left;
-		font-size: $font-size-base + 22;
+		font-size: $font-size-base + 18;
 		font-weight: 600;
-		margin-top: 4px;
 	}
 	
 	&-item-logo {
 		height: 67px;
-		margin: 0 auto;
 		max-width: 200px;
 	}
 	
 	&-copyright {
+		font-size: $font-size-base - 3;
 		padding-top: 28px;
 	}
 	
@@ -185,8 +211,6 @@ a, a:hover {
 	}
 }
 
-
-@import '_variable.scss';
 
 @media screen and (min-width: 1200px){
 		.nav-custom {
@@ -218,6 +242,10 @@ a, a:hover {
 		&-copyright {
 			padding: 0;
 		}
+		
+		&-item-logo {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -234,6 +262,10 @@ a, a:hover {
 			text-align: center;
 		}
 	}
+	
+	.slider {
+		padding: 20px;
+	}
 
 	.footer {
 		
@@ -244,6 +276,10 @@ a, a:hover {
 			a.contacts-link-f {
 				font-size: $font-size-base - 4;
 			}
+		}
+		
+		&-item-logo {
+			margin: 0 auto;
 		}
 		
 		&-section {

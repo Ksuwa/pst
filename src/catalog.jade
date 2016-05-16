@@ -1,0 +1,49 @@
+extend _template.jade
+
+block title
+	title Каталог
+block append headStyles
+	link(rel='stylesheet', href='css/catalog.min.css')
+block content
+	.slider
+		h1.h1-index Каталог товаров
+		.row
+			.col-md-4
+				a.catalog-linka.catalog-linka.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Оборудование
+			.col-md-4
+				a.catalog-linka.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Инструмент
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Электроматериалы
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Баки для люминисцентных ламп
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Хозяйственные товары
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Металлопрокат
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption 
+							|Стройматериалы на
+							br
+							| текущий ремонт
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Метизы
+			.col-md-4
+				a.catalog-link(href='#')
+					.catalog-item
+						.catalog-caption Смазочные вещества и подшипники

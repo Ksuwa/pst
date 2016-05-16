@@ -14,7 +14,7 @@ var gulp	 = require('gulp'),
 //TODO:Удалить лишние плагины!!
 
 gulp.task('build', ['clean'], function() {
-	gulp.start('jade', 'sass', 'image', 'css');
+	gulp.start('jade', 'sass', 'image');
 });
 
 //************************************
