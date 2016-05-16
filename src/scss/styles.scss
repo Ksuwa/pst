@@ -293,4 +293,10 @@ body {
 	}
 }
 
+.item img {
+	margin: 0 auto;
+}
 
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}

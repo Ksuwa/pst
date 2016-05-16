@@ -4,30 +4,32 @@ block title
 	title PST
 block content
 	.slider
-		img.slider-img.img-responsive(src='img/paint.jpg')
+		.row
+			.col-lg-12.text-center
+				#carousel-example-generic.carousel.slide(data-ride="carousel")
+					// Indicators
+					ol.carousel-indicators.hidden-xs
+						li.active(data-target='#carousel-example-generic', data-slide-to='0')
+						li(data-target='#carousel-example-generic', data-slide-to='1')
+						li(data-target='#carousel-example-generic', data-slide-to='2')
+					// Wrapper for slides
+					.carousel-inner
+						.item.active
+							img.img-responsive.img-full(src='img/paint.jpg', alt='Краска для строительства')
+						.item
+							img.img-responsive.img-full(src='img/tools.jpg', alt='Строительные инструменты')
+						.item
+							img.img-responsive.img-full(src='img/nail.jpg', alt='Гвозди')
+					// Controls
+					a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+						span.icon-prev
+					a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+						span.icon-next
 	.slider
 		h1.h1-index О компании "ПСТ"
 		p
 		| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-//	.row
-//		.slider
-//			.col-lg-12.text-center
-//				#carousel-example-generic.carousel.slide
-//				// Indicators
-//				ol.carousel-indicators.hidden-xs
-//					li.active(data-target='#carousel-example-generic', data-slide-to='0')
-//					li(data-target='#carousel-example-generic', data-slide-to='1')
-//					li(data-target='#carousel-example-generic', data-slide-to='2')
-//				// Wrapper for slides
-//				.carousel-inner
-//					.item.active
-//						img.img-responsive.img-full(src='img/paint.jpg', alt='Краска для строительства')
-//					.item
-//						img.img-responsive.img-full(src='img/tools.jpg', alt='Строительные инструменты')
-//					.item
-//						img.img-responsive.img-full(src='img/nail.jpg', alt='Гвозди')
-//				// Controls
-//				a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-//					span.icon-prev
-//				a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-//					span.icon-next
+script.
+	$('.carousel').carousel({
+		interval: 5000
+	})
