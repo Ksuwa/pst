@@ -2,6 +2,9 @@
 
 .contacts-page {
 	
+	p {
+		text-indent: 0;
+	}
 	&-btn {
 		float: right;
 		margin: 20px 15px 0 0;
@@ -14,8 +17,8 @@
 	&-list {
 		margin-bottom: 15px;
 		max-width: 710px;
-		text-shadow: $t-shadow;
 		overflow: hidden;
+		text-shadow: $t-shadow;
 		
 		li {
 			float: left;
