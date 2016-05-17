@@ -6,25 +6,28 @@ block append headStyles
 	link(rel='stylesheet', href='css/contacts.min.css')
 block content
 	.slider
-		h1.h1-index Как с нами связаться
+		h1 Как с нами связаться
 		p
 			| Вы можете задать нам интересующие вопросы с помощью формы обратной связи:
-		form.contacts-page-form(role='form')
+		form.form-horizontal.contacts-page-form(role='form')
 			.row
-				.form-group.col-lg-12
-					label Ваше имя:
-					input.form-control.contacts-page-input(type='text')
-				.form-group.col-lg-12
-					label Телефон:
-					input.form-control.contacts-page-input(type='tel')
-				.form-group.col-lg-12
-					label Почта:
-					input.form-control.contacts-page-input(type='email')
-				.form-group.col-lg-12
-					label Ваш вопрос:
-					textarea.form-control(rows='6')
-				.form-group.col-lg-12
-					input(type='hidden', name='save', value='contact')
+				.form-group
+					label.control-label.col-sm-2 Ваше имя:
+					.col-sm-10
+						input.form-control.contacts-page-input(type='text')
+				.form-group
+					label.control-label.col-sm-2 Телефон:
+					.col-sm-10
+						input.form-control.contacts-page-input(type='tel')
+				.form-group
+					label.control-label.col-sm-2 Почта:
+					.col-sm-10
+						input.form-control.contacts-page-input(type='email')
+				.form-group
+					label.control-label.col-sm-2 Ваш вопрос:
+					.col-sm-10
+						textarea.form-control(rows='6')
+						input(type='hidden', name='save', value='contact')
 					button.btn.btn-default.contacts-page-btn(type='submit') Отправить
 		p
 			|Также можете связаться с нами сами.

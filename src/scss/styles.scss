@@ -5,13 +5,22 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	font-size: $font-size-base + 36;
-	text-align: center;
+	border-bottom: $c-border-h1;
+	border-top: $c-border-h1;
+	font-size: $font-size-base + 18;
+	letter-spacing: $leter-spacing;
 	margin-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 0 7px;
 }
 
 h2 {
-	font-size: $font-size-base + 26;
+	font-size: $font-size-base + 12;
+}
+
+h3 {
+	font-size: $font-size-base + 6;
 }
 
 a, a:hover {
@@ -27,8 +36,6 @@ body {
 	flex-direction: column;
 }
 
-
-
 .page-wrapper {
 	background: url(../img/bg.jpg) no-repeat center center fixed;
 	background-color: #DCDCDC;
@@ -38,7 +45,7 @@ body {
 	line-height: 1.6;
 }
 
-.header { 
+.header {
 	color: $c-white;
 	letter-spacing: 3px;
 	max-width: 680px;
@@ -93,7 +100,6 @@ body {
 			color: $c-link-hover;
 		}
 	}
-
 }
 
 .nav-custom {
@@ -143,15 +149,14 @@ body {
 	&-img {
 		margin: 0 auto;
 	}
-	
-	.h1-index {
-		border-top: $c-border-h1;
-		border-bottom: $c-border-h1;
-		font-size: $font-size-base + 18;
-		letter-spacing: $leter-spacing;
-		text-transform: uppercase;
-		padding: 15px 0 7px;
-	}
+}
+
+.item img {
+	margin: 0 auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
 }
 
 .footer {
@@ -293,10 +298,3 @@ body {
 	}
 }
 
-.item img {
-	margin: 0 auto;
-}
-
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}

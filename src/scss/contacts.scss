@@ -3,7 +3,8 @@
 .contacts-page {
 	
 	&-btn {
-	float: right;
+		float: right;
+		margin: 20px 15px 0 0;
 	}
 	
 	&-input {
@@ -36,8 +37,11 @@
 	
 	&-form {
 		font-size: $font-size-base - 2;
-		margin-bottom: 10px;
-//		max-width: 700px;
+		margin: 30px 0 10px;
+		
+		label {
+			font-weight: 400;
+		}
 	}
 }
 
