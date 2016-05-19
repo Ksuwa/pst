@@ -9,20 +9,20 @@ block content
 		h1 Как с нами связаться
 		p
 			| Вы можете задать нам интересующие вопросы с помощью формы обратной связи:
-		form.form-horizontal.contacts-page-form(role='form')
+		form.form-horizontal.contacts-page-form#myForm(role='form', action='#')
 			.row
 				.form-group
 					label.control-label.col-sm-2 Ваше имя:
 					.col-sm-10
-						input.form-control.contacts-page-input(type='text')
+						input.form-control.contacts-page-input(type='text', placeholder='Введите имя')
 				.form-group
 					label.control-label.col-sm-2 Телефон:
 					.col-sm-10
-						input.form-control.contacts-page-input(type='tel')
+						input.form-control.contacts-page-input.need-valid#phone(type='tel', name='phone', placeholder='+7(___) ___-____')
 				.form-group
 					label.control-label.col-sm-2 Почта:
 					.col-sm-10
-						input.form-control.contacts-page-input(type='email')
+						input.form-control.contacts-page-input.mail.need-valid(type='email', name='email', placeholder='Введите e-mail')
 				.form-group
 					label.control-label.col-sm-2 Ваш вопрос:
 					.col-sm-10
@@ -54,3 +54,7 @@ block content
 			| 192281, г. Санкт-Петербург, ул. Купчинская  д.15, корп.1 г, пом. 4н
 		.map.img-responsive
 			script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_pofLPnWIZSwdOVXUVSXRBBgMK_eSwQF&width=100%&lang=ru_RU&sourceType=constructor&scroll=true')
+block append script 
+	script(src='js/valid.min.js')
+	script(src='js/maskedinput.min.js')
+	script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js')

@@ -3,12 +3,17 @@ var gulp	 = require('gulp'),
 	sass	 = require('gulp-sass'),
 	rename	 = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
+	uglify   = require('gulp-uglify'),
 	del 	 = require('del'),
 	connect	= require('gulp-connect'),
 	livereload = require('gulp-livereload');
 
+
+// //***********************************
+//		GULP BUILD
+//**************************************
 gulp.task('build', ['clean'], function() {
-	gulp.start('jade', 'sass', 'image');
+	gulp.start('jade', 'sass', 'image', 'script');
 });
 
 //************************************
@@ -41,6 +46,20 @@ gulp.task('image', function () {
 		.pipe( gulp.dest('dist/img') )
 });
 
+
+//************************************
+//		GULP SCRIPT
+//************************************
+gulp.task('script', function() {
+	gulp.src('src/js/**/*.js')
+		.pipe(uglify())
+		.pipe( rename({
+				suffix: '.min'
+			}))
+		.pipe(gulp.dest('dist/js'))
+		.pipe( connect.reload() );
+});
+
 //************************************
 //		ClEAN
 //************************************
@@ -66,6 +85,7 @@ gulp.task('connect', function() {
 gulp.task('watch', function() {
 	gulp.watch( 'src/**/*.jade', ['jade'] );
 	gulp.watch( 'src/scss/**/*.scss', ['sass'] );
+	gulp.watch( 'src/js/**/*.js', ['script'] );
 });
 
 // //***********************************
