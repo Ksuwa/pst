@@ -21,7 +21,7 @@ $(document).ready(function() {
           email: "Введите корректный e-mail"
         }
     },
-    errorClass:'has-error has-feedback',
+    errorClass:'has-error',
     highlight: function(element, errorClass, validClass) {
       $(element).closest('.need-valid').addClass(errorClass);
     },
@@ -29,7 +29,6 @@ $(document).ready(function() {
       $(element).closest('.need-valid').removeClass(errorClass);
     }
 
-    // success: "valid"
   });
   $("#phone").mask("+7(999) 999-9999")
 });
