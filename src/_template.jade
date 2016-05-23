@@ -1,3 +1,11 @@
+block vars
+	- var phoneNumber01 = "+7 (953) 140-84-40";
+	- var phoneLink01 = "+79531408440";
+	- var phoneNumber02 = "";
+	- var mailText = "pst_spb2016@mail.ru";
+
+
+
 doctype html
 html
 	head
@@ -26,13 +34,13 @@ html
 				.contacts
 					ul.list-unstyled
 						li.contacts-list
-							a.contacts-link(href='tel:+79531408440')
-								i.fa.fa-phone
-								|   +7 (953) 140 84 40
+							a.contacts-link(href='tel:'+phoneLink01)
+								i.fa.fa-phone 
+								|   #{phoneNumber01}
 						li.contacts-list
-							a.contacts-link(href='malito:inna_pss@mail.ru')
+							a.contacts-link(href='malito:'+mailText)
 								i.fa.fa-envelope
-								|  inna_pss@mail.ru
+								|  #{mailText}
 		nav.navbar.navbar-default.nav-custom
 			.container
 				.navbar-header
@@ -71,13 +79,13 @@ html
 						.col-md-3.col-xs-12
 							.footer-contacts
 								span.contacts-info
-									a.contacts-link-f(href='tel:+79531408440')
+									a.contacts-link-f(href='tel:'+phoneLink01)
 										i.fa.fa-phone
-										|   +7 (953) 140 84 40
+										|   #{phoneNumber01}
 								span.contacts-info
-									a.contacts-link-f(href='malito:inna_pss@mail.ru')
+									a.contacts-link-f(href='malito:'+mailText)
 										i.fa.fa-envelope
-										|  inna_pss@mail.ru
+										|  #{mailText}
 		block script
 			script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
 			script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')

@@ -2,12 +2,12 @@
 
 .catalog {
 	&-item {
-		background: url(../img/catalog/instrum.jpg) no-repeat;
 		background-color: $c-white;
 		max-width: 100%;
 		height: 150px;
 		margin-bottom: 30px;
 	}
+	
 	
 	&-caption {
 		color: $c-white;
@@ -24,3 +24,39 @@
 		background-color: lighten($bg-catalog-item, 20%);
 	}
 }
+
+	.oborudovanie {
+		background: url(../img/catalog/oborudovanie.jpg) no-repeat;
+	}
+
+	.instrument {
+		background: url(../img/catalog/instrum.jpg) no-repeat;
+	}
+	
+	.electromaterialy {
+		background: url(../img/catalog/electrotovary.jpg) no-repeat;
+	}
+	
+	.lamps {
+		background: url(../img/catalog/lamp.jpg) no-repeat;
+	}
+	
+	.hoz-tovary {
+		background: url(../img/catalog/hoz-tovary.jpg) no-repeat;
+	}
+	
+	.metall {
+		background: url(../img/catalog/metall.jpg) no-repeat;
+	}
+	
+	.remont {
+		background: url(../img/catalog/stroy-materialy.png) no-repeat;
+	}
+	
+	.metizy {
+		background: url(../img/catalog/metizy.jpg) no-repeat;
+	}
+	
+	.smazochnie {
+		background: url(../img/catalog/smazyv.jpg) no-repeat;
+	}

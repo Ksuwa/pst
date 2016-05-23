@@ -35,21 +35,21 @@ block content
 			|Также можете связаться с нами сами.
 		ul.list-unstyled.contacts-page-list
 			li
-				a(href='')
+				a(href='tel:'+phoneLink01)
 					i.fa.fa-phone
-					|    +7(953)-140-84-40
-				br
-				a(href='')
-					i.fa.fa-phone.vision-none  
-					|   +7(951)-643-34-61
+					|    #{phoneNumber01}
 			li
 				a(href='')
 					i.fa.fa-fax  
-					|   8(812)-640-97-57
-			li
+					|  8 (812)-640-97-57
+				br
 				a(href='')
+					i.fa.fa-fax.vision-none  
+					|    8 (812)-242-87-33
+			li
+				a(href='malito:'+mailText)
 					i.fa.fa-envelope  
-					|    inna_pss@mail.ru
+					|    #{mailText}
 		.clearfix
 		p
 			strong Адрес:  
